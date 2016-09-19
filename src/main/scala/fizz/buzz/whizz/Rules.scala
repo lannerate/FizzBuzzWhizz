@@ -1,5 +1,7 @@
-import _root_.Actions.Action
-import _root_.Matchers.Matcher
+package fizz.buzz.whizz
+
+import fizz.buzz.whizz.Actions._
+import fizz.buzz.whizz.Matchers._
 
 /**
   * Created by apple on 9/18/16.

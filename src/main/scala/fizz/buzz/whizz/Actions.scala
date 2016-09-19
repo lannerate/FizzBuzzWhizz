@@ -1,3 +1,5 @@
+package fizz.buzz.whizz
+
 /**
   * Created by apple on 9/18/16.
   */
