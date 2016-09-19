@@ -1,4 +1,4 @@
-## Fizz Buzz Whizz rule
+## Fizz Buzz Whizz rule (Scala)
 
 ### R1
 - times(3) -> Fizz
