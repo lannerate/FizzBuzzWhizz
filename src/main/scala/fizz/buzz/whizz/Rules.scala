@@ -12,10 +12,10 @@ object Rules {
   def atom(matcher : => Matcher, action : => Action ): Rule =
     n => if( matcher(n) ) action(n) else ""
 
-  def allof(rules: Rule*): Rule =
+  def anyof(rules: Rule*): Rule =
     n => rules.map(_(n)).filterNot(_.isEmpty).headOption.getOrElse("")
 
-  def anyof(rules: Rule*): Rule =
+  def allof(rules: Rule*): Rule =
     n => rules.foldLeft(""){ _ + _(n) }
 
 }

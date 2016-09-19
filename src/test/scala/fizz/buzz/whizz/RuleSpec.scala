@@ -3,9 +3,8 @@ package fizz.buzz.whizz
 import fizz.buzz.whizz.Actions._
 import fizz.buzz.whizz.Matchers._
 import fizz.buzz.whizz.Rules._
-
-import org.scalatest.prop._
-import org.scalatest._
+import org.scalatest.prop.TableDrivenPropertyChecks
+import org.scalatest.{Matchers, PropSpec}
 
 /**
   * Created by hzhang3 on 9/19/2016.
@@ -35,19 +34,18 @@ class RuleSpec extends PropSpec with TableDrivenPropertyChecks with Matchers{
 
   val specs = Table(
     ("n", "expect"),
-//    (3, "Fizz"),
-//    (5, "Buzz"),
-//    (7, "Whizz"),
-//    (3 * 5, "FizzBuzz"),
-//    (3 * 7, "FizzWhizz"),
-//    (5 * 7 * 2, "BuzzWhizz"),
-//    (3 * 5 * 7, "FizzBuzzWhizz"),
-//    (13,"Fizz"),
+    (3, "Fizz"),
+    (5, "Buzz"),
+    (7, "Whizz"),
+    (3 * 5, "FizzBuzz"),
+    (3 * 7, "FizzWhizz"),
+    (3 * 5 * 7, "FizzBuzzWhizz"),
+    (13,"Fizz"),
     (35, "Fizz"),
     (4, "4")
   )
 
   property("fizz buzz whizz"){
-    forAll(specs) { spec(_) should be (_) }
+    forAll(specs){ spec(_) should be (_)}
   }
 }
