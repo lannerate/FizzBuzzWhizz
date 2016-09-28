@@ -1,12 +1,7 @@
-*.un~
-*.swp
-tags
-target
-project/boot
-.history
-project.vim
-*.old
-.idea
-.project
-.classpath
-.metadata/
+# Created by .ignore support plugin (hsz.mobi)
+.gitignore
+.idea/
+project/project/
+project/target/
+target/
+s101plugin.state
